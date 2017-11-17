@@ -1,8 +1,7 @@
 <div class = "container">
   <div>
     <h1>Hero Form</h1>
-    <form (ngSubmit) = "onSubmit()" #heroForm = "ngForm">
-      {{diagnostic}}
+    <form (ngSubmit) = "onSubmit(heroForm.value)" #heroForm = "ngForm">
       <div class = "form-group">
         <label for = "name">Name</label>
         <input type = "text" class = "form-control" id="name" required
@@ -13,9 +12,9 @@
       </div>
 
       <div class = "from-group">
-        <label for = "alterEgo">Alter Ego</label>
-        <input type = "text" class = "form-control" id = "alterEgo"
-               [(ngModel)]="model.alterEgo" name =  "alterEgo">
+        <label for = "password">Password</label>
+        <input type = "text" class = "form-control" id = "password"
+               ngModel name =  "password">
       </div>
 
       <div class = "form-group">
